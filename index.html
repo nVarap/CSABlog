@@ -1,0 +1,38 @@
+---
+layout: default
+title: Student Blog
+---
+
+
+
+
+<body> 
+<h1>Welcome!</h1>
+
+
+<p style="color:white" id="demo"> </p>
+
+<img src="images/banner.png">
+</body>
+
+<script>
+    var i = 0;
+    var txt = "Welcome to Vlu's super special CSA blog! This is a continuation of his award-winning blog: Goose. Enjoy and CODE CODE CODE! 🦆 ";
+    var tw = document.getElementById("demo");
+    console.log(tw)
+    var speed = 50;
+    function typeWriter() {
+      if (i <= txt.length) {
+        tw.innerHTML = txt.substring(0, i) + "|"
+        i++;
+        setTimeout(typeWriter, speed)
+      }
+    }
+
+    addEventListener("load", (event) => {typeWriter()});
+</script>
+
+
+
+
+

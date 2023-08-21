@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title> Dark Hallways </title>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="escape.scss">
+</head>
+
+<body style="background-color: black;">
+    <script>
+
+        window.onload = (event) => {
+            let win = localStorage.getItem("causeOfVictory");
+            document.getElementById("cause").innerHTML = "You won through the ending: " + win;
+            let hint = document.getElementById("hint");
+            switch (win) {
+                case "fighting":
+                    hint.innerHTML = "You've fought your way through to the end"
+                    break;
+                case "escaping":
+                    hint.innerHTML = "You've escaped sneakily"
+                    break;
+                // Add more cases as needed
+                default:
+                hint.innerHTML = "You glitched."
+                // Code to be executed when the expression doesn't match any case
+            }
+        };
+    </script>
+    <img class="image" style="width: 1000px; height: 250px;" src="./images/youwin.png">
+    <div style="font-size: 100px; color: white; text-align: center; padding-top: 20px;" id="cause"></div>
+    <div style="font-size: 40px; color: red; text-align: center; padding-bottom: 180px; padding-top: 60px;" id="hint"></div>
+    <div class="menu">
+        <a href="http://127.0.0.1:5501/index.html"><button class="button" data-inline="true" id="add">Back to Menu</button></a>
+    </div>
+
+    <script>
+        var but = document.getElementById("add");
+        but.addEventListener("click", () => {
+            fetch('http://127.0.0.1:8086/api/points/create', {
+                method: 'POST',
+                mode: "cors",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ "name" : localStorage.getItem("name"), "score":Math.floor(Math.random()*100)})
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Process the response data
+                    console.log(data);
+                    localStorage.clear()
+                    setTimeout(() => {
+                        window.location = 'http://127.0.0.1:5501/index.html'
+                    }, 500);
+                })
+                .catch(error => {
+                    // Handle any errors that occurred during the request
+                    console.error('Error:', error);
+                });
+
+        })
+
+    </script>
+</body>
+
+</html>

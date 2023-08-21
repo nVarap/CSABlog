@@ -1,0 +1,48 @@
+<html>
+
+<head>
+   <title> Dark Hallways </title>
+
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="escape.scss">
+</head>
+
+<body style="position: relative; background-color: black;">
+   <img class="image" style="border-top: 50px;" src="images/leaderboard.png">
+
+   <div style="outline: 5px solid white; padding-bottom: 500px;" id="leaderboard">
+      <div style="color: white; width: 200px"> Place | Name | Points</div>
+   </div>
+   <div class="menu">
+      <a href="http://127.0.0.1:5501/index.html"><button class="button" data-inline="true">Return</button></a>
+   </div>
+   <script>
+      fetch('http://127.0.0.1:8086/api/points/')
+         .then(response => {
+            if (!response.ok) {
+               throw new Error('Network response was not ok');
+            }
+            return response.json();
+         })
+         .then(data => {
+            let leaderboard = document.getElementById("leaderboard");
+            // Process the response data
+            console.log(data);
+            let i = 1;
+            data.forEach(element => {
+               let d = document.createElement("div");
+               d.style = "color: white; width: 500px";
+               d.innerHTML = i + ". | " + element["name"] + " | " + element["points"];
+               leaderboard.appendChild(d);
+               i ++;
+            });
+         })
+         .catch(error => {
+            // Handle any errors that occurred during the request
+            console.error('Error:', error);
+         });
+
+   </script>
+</body>
+
+</html>

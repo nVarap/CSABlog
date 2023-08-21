@@ -1,0 +1,72 @@
+/* Split the screen in half */
+.split {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Control the left side */
+  .left {
+    left: 0;
+    width: 60%;
+    background-color: black;
+  }
+  
+  /* Control the right side */
+  .right {
+    right: 0;
+    width: 40%;
+    background-color: rgba(243, 230, 230, 0.176);
+  }
+  
+  /* If you want the content centered horizontally and vertically */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  /* Style the image inside the centered container, if needed */
+  .centered img {
+    width: 450px;
+    height: 550px;
+  }
+  .menu {
+    position: fixed;
+    bottom: -300px;
+    right: -280px;
+    width: 500px; 
+    align-items: center;
+    }.button {
+    background-color: rgba(255, 255, 255, 0.441);
+    width: 100px;
+    height: 75px;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    }
+
+    .grid-container {
+        display: grid;
+        position: fixed;
+        grid-template-columns: auto auto auto;
+        background-color: #2195f36a;
+        padding: 10px;
+        bottom: 25px;
+        right: -80px;
+      }
+      
+      .grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        flex: 25%;
+        text-align: center;
+      }

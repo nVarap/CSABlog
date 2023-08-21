@@ -1,0 +1,39 @@
+<html>
+
+<head>
+   <title> Dark Hallways </title>
+
+<meta charset="utf-8">
+<link rel="stylesheet" href="escape.scss"> 
+</head>
+
+<body style="background-color: black;">
+   
+   <img class="image" style="width: 575px; height: 800px;" src="./images/darkhallways.jpg">
+   <div class="menu">
+      
+      <a href="http://127.0.0.1:5501/leaderboard.html"><button class="button" data-inline="true">Leaderboard</button></a>   
+      <button class="button" data-inline="true" id="startGame">Start Game</button>
+   </div>
+   
+   <script>
+      const but = document.getElementById("startGame");
+      but.addEventListener("click", () => {
+         let name = prompt("Please enter your name", "Default Name");
+         let input = document.getElementById("item");
+         if(name == null || name == ""){
+            alert("Haven't filled out name yet");
+            console.log("alert")
+         }
+         else {
+            localStorage.setItem("name", name)
+            console.log("set")
+            setTimeout(() => {
+               window.location = 'http://127.0.0.1:5501/game.html'
+            }, 500);
+         }
+      })
+   </script>
+</body>
+
+</html>

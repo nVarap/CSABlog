@@ -1,0 +1,256 @@
+<html>
+
+    <head>
+        <title> Dark Hallways </title>
+
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="center.scss">
+        <script type="text/javascript" src="data.json">
+        </script>
+    </head>
+
+    <script>
+        /*
+        Player Variables
+        */
+       let armor = 0;
+       let damage = 0;
+
+
+
+        var local = "0";
+
+
+        var all = {
+            "0": {
+                "script": "You approach a dark hallway. <br> There appears to be something on the ground. <br> Pick it up?",
+                "image": "hallway1.jpeg",
+                "choices": ["Yes", "No"],
+                "results" : {"Yes" : addToInv, "No":moveTo, "Yesfunc" : ["pistol", "1"], "Nofunc" : "1"}
+            },
+            "1": {
+                "script": "There appears to be something in the distance. <br> The hallway spans further. <br> Whatever is there appears to be approaching.",
+                "image": "hallway2.jpeg",
+                "choices": ["Approach", "Hide"],
+                "results" : {"Approach" : moveTo, "Hide":moveTo, "Approachfunc" : "3", "Hidefunc" : "2"}
+            },
+            "2": {
+                "script": "You sit behind a couch, waiting for whatever is there to disappear <br> It is possible to sneak <br> Do we sneak or stay?",
+                "image": "hallway2.jpeg",
+                "choices": ["Sneak", "Stay"],
+                "results" : {"Sneak" : moveTo, "Stay":moveTo, "Sneakfunc" : "6", "Stayfunc" : "2"}
+            },
+            "3": {
+                "script": "You approach the thing... <br> And it attacks! <br> Do we fight or run?",
+                "image": "hallway3.png",
+                "choices": ["Fight", "Run"],
+                "results" : {"Fight" : specialMove, "Run":addToInv, "Fightfunc" : [4, 5, 'damage', 0], "Runfunc" : ["Tendril", 1]}
+            },
+            "4": {
+                "script": "You fight furiously... <br> But you are too weak <br> You fall to the maw of the monster",
+                "image": "hallway3.png",
+                "choices": ["End", "Game"],
+                "results" : {"End" : leave, "Game":leave, "Endfunc" : "monster", "Gamefunc" : "monster"}
+            },
+            "5": {
+                "script": "You fight furiously ... <br> and you destroy the monster! <br> You see a door beyond. Will you walk through?",
+                "image": "hallway3.png",
+                "choices": ["Go Through", "Stay"],
+                "results" : {"Go Through" : moveTo, "Stay":moveTo, "Go Throughfunc" : "9", "Stayfunc" : "8"}
+            },
+            "6": {
+                "script": "You sneak by the monster <br> and behind it you see a door. Do we stay or do we go approach the door?",
+                "image": "hallway3.png",
+                "choices": ["Go!", "Stay"],
+                "results" : {"Go!" : moveTo, "Stay":moveTo, "Go!func" : "3", "Stayfunc" : "7"}
+            },
+            "7": {
+                "script": "You stay inside <br> but you are lost within the chaos of the labyrinth <br> You fall in the winding labyrinth",
+                "image": "hallway4.jpeg",
+                "choices": ["End", "Game"],
+                "results" : {"End" : leave, "Game":leave, "Endfunc" : "stay", "Gamefunc" : "stay"}
+            },
+            "8": {
+                "script": "Your raucous fight opens a door in the damp floor <br> unable to keep up your balance, you fall into the ground <br> and fall into the infinite chasm",
+                "image": "hallway5.jpg",
+                "choices": ["End", "Game"],
+                "results" : {"End" : leave, "Game":leave, "Endfunc" : "hole", "Gamefunc" : "hole"}
+            },
+            "9": {
+                "script": "You escape through the door into the light. <br> The air feels good, and the darkness fades <br> You escape!",
+                "image": "hallway6.jpg",
+                "choices": ["End", "Game"],
+                "results" : {"End" : victory, "Game":victory, "Endfunc" : "fighting", "Gamefunc" : "fighting"}
+            }
+            
+
+        };
+
+        //TODO: Finish the sneak and the stay/go through (completion page)
+        // Then finish up backend and leaderboard
+        // Completed: sneak, ending of staying
+        
+        var playerStats = {
+            "armor" : 0,
+            "damage" : 0,
+            "health" : 0,
+            "equipped" : {
+                "damage": "",
+                "armor" : ""
+            }
+        }
+        var inventory = {
+            
+        }
+
+        var assets = {
+            "pistol" : ["damage", 1],
+            "vest" : ["armor", 2],
+            "tendril" : ["damage", 2]
+        }
+
+        function formatStuff(location) {
+            local = location;
+            console.log("Locality: " + local);
+            let point = all[location];
+            document.getElementById("hallwayIMG").src = "images/" + point["image"];
+            document.getElementById("C1").innerHTML = point["choices"][0];
+            document.getElementById("C2").innerHTML = point["choices"][1];
+            document.getElementById("script").innerHTML = point["script"];
+        }
+
+        function equip(item){
+            inventory[item] = !inventory[item];
+            if (inventory[item]){
+                document.getElementById("err").innerHTML = item + " equipped!"
+                setTimeout(function(){document.getElementById("err").innerHTML = ""},1000);
+                playerStats[assets[item][0]] += assets[item][1];
+                playerStats["equipped"][assets[item][0]] = item;
+            }
+            else {
+                document.getElementById("err").innerHTML = item + " unequipped."
+                setTimeout(function(){document.getElementById("err").innerHTML = ""},1000);
+                playerStats[assets[item][0]] -= assets[item][1];
+            }
+        }
+
+        function addToInv(stuff) {
+            let name = stuff[0];
+            let location = stuff[1];
+            let elems = document.getElementsByName("slot");
+            let ocured = false;
+            for(let i = 0; i < elems.length; i++){
+                slot = elems[i];
+                if(slot.innerHTML === ""){
+                    var b = document.createElement("button");
+                    b.innerHTML = name
+                    b.id = name
+                    b.addEventListener("click", function(event){
+                        equip(name)
+                    })
+
+                    document.getElementById(slot.id).appendChild(b);
+                    ocured = true;
+                    document.getElementById("err").innerHTML = "You picked up a " + name
+                    setTimeout(function(){document.getElementById("err").innerHTML = ""},1000);
+                    break
+                }
+            }
+            if (!ocured){
+                document.getElementById("err").innerHTML = "Inventory Full!"
+                setTimeout(function(){document.getElementById("err").innerHTML = ""},1000);
+                
+            }
+           moveTo(location);
+        }
+
+        function moveTo(location){
+            console.log("Location Passed in " + location)
+            formatStuff(location);
+        }
+
+        function specialMove(information){//)loc1, loc2, condition, parameter){
+            console.log(information)
+            console.log(playerStats[information[2]] > information[3])
+            if(playerStats[information[2]] > information[3]){
+                moveTo(information[1])
+            }
+            else {
+                moveTo(information[0])
+            }
+        }
+
+        function manageFunctions(value){
+            console.log(local)
+            console.log("Stuff: " +  document.getElementById('C2').innerHTML);
+            let func = all[local]["results"];
+            console.log("value: " + value);
+            console.log(all[local]["results"])
+            func[value](func[value+"func"]);
+        }
+
+        function leave(cause){
+            localStorage.setItem("causeOfDeath", cause);
+            setTimeout(() => {
+                window.location = 'http://127.0.0.1:5501/gameover.html'
+            }, 500);
+           
+        }
+
+        function victory(win){
+            localStorage.setItem("causeOfVictory", win);
+            setTimeout(() => {
+                window.location = 'http://127.0.0.1:5501/victory.html'
+            }, 500);
+        }
+
+        window.onload = (event) => {
+            formatStuff(local);
+        };
+
+
+    </script>
+
+    <body style="position: relative; background-color: black;">
+        <div class="split left">
+            <div class="centered">
+                <img src="images/hallway1.jpeg" alt="Hallway1" id="hallwayIMG">
+                <div style="color: white;">
+                    <p id="script"> </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="split right">
+            <div class="centered">
+                <h1 style="position: fixed; bottom: 270px; right: -80px; color: white;"> Inventory </h1>
+                <div class="grid-container">
+                    <div id="slot1" name="slot" class="grid-item"></div>
+                    <div id="slot2" name="slot" class="grid-item"></div>
+                    <div id="slot3" name="slot" class="grid-item"></div>
+                    <div id="slot4" name="slot" class="grid-item"></div>
+                    <div id="slot5"name="slot" class="grid-item"></div>
+                    <div id="slot6" name="slot" class="grid-item"></div>
+                    <div id="slot7" name="slot" class="grid-item"></div>
+                    <div id="slot8" name="slot" class="grid-item"></div>
+                    <div id="slot9" name="slot" class="grid-item"></div>
+                    <div id="slot10" name="slot" class="grid-item"></div>
+                    <div id="slot11" name="slot" class="grid-item"></div>
+                    <div id="slot12" name="slot" class="grid-item"></div>
+                    <div id="slot13" name="slot" class="grid-item"></div>
+                    <div id="slot14" name="slot" class="grid-item"></div>
+                    <div id="slot15" name="slot" class="grid-item"></div>
+                    
+
+                </div>
+                <p id="err" style="position: fixed; top: 10px; right: -35px; color: white;"></p>
+                <div class="menu">
+                    <button onclick="manageFunctions(document.getElementById('C1').innerHTML)" id="C1" data-inline="true" class="button" style="margin: 0px"> </button>
+                    <button onclick="manageFunctions(document.getElementById('C2').innerHTML)" id="C2" data-inline="true" class="button" style="margin: 50px"> </button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </body>
+
+    </html>

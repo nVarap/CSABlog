@@ -1,0 +1,65 @@
+// This defines a 3x3 grid 
+$grid-template-columns: repeat(3, 1fr);
+$grid-template-rows: repeat(3, 1fr);
+
+.container {
+  display:grid;
+  grid-template-rows:auto 1fr auto;
+  grid-template-columns:100%;
+
+  /* fallback height */
+  min-height:100vh;
+  /* new small viewport height for modern browsers */
+  min-height:100svh;
+}
+
+.menu{
+  background-color: white;
+  text-align: center;
+  top: 100%;
+}
+
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.button{
+  border-width: 3px;
+  font-family:'Times New Roman', Times, serif;
+  width: 100px;
+  height: 30px;
+
+}
+
+#footer{
+  text-align: center;
+  color: purple;
+}
+
+// ... define other grid item classes as needed
+
+
+/* Split the screen in half */
+.splitty {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: #111;
+}
+
+.right {
+  right: 0;
+  background-color: red;
+}
+
