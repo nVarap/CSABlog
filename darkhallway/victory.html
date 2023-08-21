@@ -9,33 +9,30 @@
 
 <body style="background-color: black;">
     <script>
+
         window.onload = (event) => {
-            let death = localStorage.getItem("causeOfDeath");
-            document.getElementById("cause").innerHTML = "Cause of death is by " + death;
+            let win = localStorage.getItem("causeOfVictory");
+            document.getElementById("cause").innerHTML = "You won through the ending: " + win;
             let hint = document.getElementById("hint");
-            switch (death) {
-                case "monster":
-                    hint.innerHTML = "Hint: Try pressing on buttons in the inventory to equip them!"
+            switch (win) {
+                case "fighting":
+                    hint.innerHTML = "You've fought your way through to the end"
                     break;
-                case "stay":
-                    hint.innerHTML = "Hint: It's probably gone by now. Right?"
-                    break;
-                case "hole":
-                    hint.innerHTML = "Hint: Mate, it's dead"
+                case "escaping":
+                    hint.innerHTML = "You've escaped sneakily"
                     break;
                 // Add more cases as needed
                 default:
-                    hint.innerHTML = "You glitched."
+                hint.innerHTML = "You glitched."
                 // Code to be executed when the expression doesn't match any case
             }
         };
     </script>
-    <img class="image" style="width: 1000px; height: 250px;" src="./images/gameover.png">
+    <img class="image" style="width: 1000px; height: 250px;" src="./dhimages/youwin.png">
     <div style="font-size: 100px; color: white; text-align: center; padding-top: 20px;" id="cause"></div>
-    <div style="font-size: 40px; color: red; text-align: center; padding-bottom: 180px; padding-top: 60px;" id="hint">
-    </div>
+    <div style="font-size: 40px; color: red; text-align: center; padding-bottom: 180px; padding-top: 60px;" id="hint"></div>
     <div class="menu">
-        <button class="button" data-inline="true" id="add">Back to Menu</button>
+        <a href="{{site.baseurl}}/student"><button class="button" data-inline="true" id="add">Back to Menu</button></a>
     </div>
 
     <script>
@@ -47,7 +44,7 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ "name" : localStorage.getItem("name"), "score":Math.floor(100-Math.random()*100)})
+                body: JSON.stringify({ "name" : localStorage.getItem("name"), "score":Math.floor(Math.random()*100)})
             })
                 .then(response => {
                     if (!response.ok) {
@@ -60,7 +57,7 @@
                     console.log(data);
                     localStorage.clear()
                     setTimeout(() => {
-                        window.location = 'http://127.0.0.1:5501/index.html'
+                        window.location = 'http://{{site.baseurl}}/darkhallway/index.html'
                     }, 500);
                 })
                 .catch(error => {

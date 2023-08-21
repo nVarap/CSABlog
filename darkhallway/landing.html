@@ -9,10 +9,10 @@
 
 <body style="background-color: black;">
    
-   <img class="image" style="width: 575px; height: 800px;" src="./images/darkhallways.jpg">
+   <img class="image" style="width: 575px; height: 800px;" src="./dhimages/darkhallways.jpg">
    <div class="menu">
       
-      <a href="http://127.0.0.1:5501/leaderboard.html"><button class="button" data-inline="true">Leaderboard</button></a>   
+      <a href="./leaderboard.html"><button class="button" data-inline="true">Leaderboard</button></a>   
       <button class="button" data-inline="true" id="startGame">Start Game</button>
    </div>
    
@@ -29,7 +29,7 @@
             localStorage.setItem("name", name)
             console.log("set")
             setTimeout(() => {
-               window.location = 'http://127.0.0.1:5501/game.html'
+               window.location = './game.html'
             }, 500);
          }
       })

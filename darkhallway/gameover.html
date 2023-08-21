@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title> Dark Hallways </title>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="escape.scss">
+</head>
+
+<body style="background-color: black;">
+    <script>
+        window.onload = (event) => {
+            let death = localStorage.getItem("causeOfDeath");
+            document.getElementById("cause").innerHTML = "Cause of death is by " + death;
+            let hint = document.getElementById("hint");
+            switch (death) {
+                case "monster":
+                    hint.innerHTML = "Hint: Try pressing on buttons in the inventory to equip them!"
+                    break;
+                case "stay":
+                    hint.innerHTML = "Hint: It's probably gone by now. Right?"
+                    break;
+                case "hole":
+                    hint.innerHTML = "Hint: Mate, it's dead"
+                    break;
+                // Add more cases as needed
+                default:
+                    hint.innerHTML = "You glitched."
+                // Code to be executed when the expression doesn't match any case
+            }
+        };
+    </script>
+    <img class="image" style="width: 1000px; height: 250px;" src="./images/gameover.png">
+    <div style="font-size: 100px; color: white; text-align: center; padding-top: 20px;" id="cause"></div>
+    <div style="font-size: 40px; color: red; text-align: center; padding-bottom: 180px; padding-top: 60px;" id="hint">
+    </div>
+    <div class="menu">
+        <a href="{{site.baseurl}}/"><button class="button" data-inline="true">Back to Menu</button></a>
+    </div>
+
+</body>
+
+</html>

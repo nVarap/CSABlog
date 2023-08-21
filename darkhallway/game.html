@@ -113,7 +113,7 @@
             local = location;
             console.log("Locality: " + local);
             let point = all[location];
-            document.getElementById("hallwayIMG").src = "images/" + point["image"];
+            document.getElementById("hallwayIMG").src = "dhimages/" + point["image"];
             document.getElementById("C1").innerHTML = point["choices"][0];
             document.getElementById("C2").innerHTML = point["choices"][1];
             document.getElementById("script").innerHTML = point["script"];
@@ -192,7 +192,7 @@
         function leave(cause){
             localStorage.setItem("causeOfDeath", cause);
             setTimeout(() => {
-                window.location = 'http://127.0.0.1:5501/gameover.html'
+                window.location = './gameover.html'
             }, 500);
            
         }
@@ -200,7 +200,7 @@
         function victory(win){
             localStorage.setItem("causeOfVictory", win);
             setTimeout(() => {
-                window.location = 'http://127.0.0.1:5501/victory.html'
+                window.location = './victory.html'
             }, 500);
         }
 
@@ -214,7 +214,7 @@
     <body style="position: relative; background-color: black;">
         <div class="split left">
             <div class="centered">
-                <img src="images/hallway1.jpeg" alt="Hallway1" id="hallwayIMG">
+                <img src="dhimages/hallway1.jpeg" alt="Hallway1" id="hallwayIMG">
                 <div style="color: white;">
                     <p id="script"> </p>
                 </div>
