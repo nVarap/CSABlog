@@ -32,42 +32,10 @@
     <div style="font-size: 100px; color: white; text-align: center; padding-top: 20px;" id="cause"></div>
     <div style="font-size: 40px; color: red; text-align: center; padding-bottom: 180px; padding-top: 60px;" id="hint"></div>
     <div class="menu">
-        <a href="{{site.baseurl}}/student"><button class="button" data-inline="true" id="add">Back to Menu</button></a>
+        <a href="{{site.baseurl}}/"><button class="button" data-inline="true" id="add">Back to Menu</button></a>
     </div>
 
-    <script>
-        var but = document.getElementById("add");
-        but.addEventListener("click", () => {
-            fetch('http://127.0.0.1:8086/api/points/create', {
-                method: 'POST',
-                mode: "cors",
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ "name" : localStorage.getItem("name"), "score":Math.floor(Math.random()*100)})
-            })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    // Process the response data
-                    console.log(data);
-                    localStorage.clear()
-                    setTimeout(() => {
-                        window.location = 'http://{{site.baseurl}}/darkhallway/index.html'
-                    }, 500);
-                })
-                .catch(error => {
-                    // Handle any errors that occurred during the request
-                    console.error('Error:', error);
-                });
-
-        })
-
-    </script>
+   
 </body>
 
 </html>
