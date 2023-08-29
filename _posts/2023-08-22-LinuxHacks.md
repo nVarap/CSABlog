@@ -5,6 +5,7 @@ layout: post
 title: Linux Hacks
 description: Linux Hacks
 type: hacks
+courses: { csa: {week: 1} }
 ---
 
 # Useful Linux Commands
