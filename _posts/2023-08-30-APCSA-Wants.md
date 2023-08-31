@@ -5,7 +5,7 @@ layout: post
 title: AP Standards for CSA
 description: AP Standards CSA
 type: tangibles
-courses: {'csa': {'week': 2}}
+courses: {'csa': {'week': 1}}
 ---
 
 # APCSA General standards:

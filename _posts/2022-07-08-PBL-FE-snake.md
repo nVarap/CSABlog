@@ -5,7 +5,7 @@ description: A pretty advanced use of JavaScript building classic snake game usi
 permalink: /frontend/snake
 image: /images/snake.png
 type: hacks
-courses: { csa: {week: 2} }
+courses: { csa: {week: 1} }
 ---
 
 
