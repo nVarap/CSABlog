@@ -72,3 +72,7 @@ Currently, we've set up the majority of our data and API, and we've also set up 
 - Multiple conversations
 - Chat-GPT usage
 - Asking others outside our group for help
+
+## Sprint Diagram
+
+<img src="{{site.baseurl}}/images/dating-app.png">
