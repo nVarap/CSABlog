@@ -29,4 +29,4 @@ courses: {'csa': {'week': 2}}
 
 # Stretch Goals:
 - Build a chat environment between the two people
-- Be able to change preferences when looking for people (filters)c
+- Be able to change preferences when looking for people (filters)
