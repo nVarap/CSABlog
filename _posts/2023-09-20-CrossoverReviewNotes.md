@@ -4,7 +4,7 @@ comments: True
 layout: post
 title: Review Notes
 description: Week 4 Plans
-type: plans
+type: tangibles
 courses: { 'csa': {'week': 4} }
 ---
 
@@ -59,6 +59,3 @@ uses strings to then test.
 - Added the sum of the ratings divided by all the array (finding the mean)
 - Will check to see if there is an exclamation point. 
 - Could have written the 
-
-## FRQ 2: Classes (but not me)
-- 
