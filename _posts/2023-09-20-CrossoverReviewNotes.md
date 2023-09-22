@@ -59,3 +59,9 @@ uses strings to then test.
 - Added the sum of the ratings divided by all the array (finding the mean)
 - Will check to see if there is an exclamation point. 
 - Could have written the 
+
+## FRQ: Classes
+- He presented late
+- Wrote a guessing game
+- Wrote the getInt() function
+- Wanted to point out the corresponding letters.
