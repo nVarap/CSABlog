@@ -65,3 +65,12 @@ uses strings to then test.
 - Wrote a guessing game
 - Wrote the getInt() function
 - Wanted to point out the corresponding letters.
+
+
+My Grade: 0.95
+
+FINAL GRADES
+**2D Arrays** Both 0.95
+**Methods and Classes**  0.93
+**Methods and Control Structures** 0.95
+**FRQ 3**: 0.92
