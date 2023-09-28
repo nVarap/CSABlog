@@ -5,7 +5,7 @@ layout: post
 title: Scrum Team and Scrum Management
 description: Week 3 Plans
 type: tangibles
-courses: { 'csa': {'week': 4} }
+courses: { 'csa': {'week': 3} }
 ---
 
 # Scrum Process - CODE MONKEY'S HIERARCHY
