@@ -12,7 +12,7 @@ courses: { 'csa': {'week': 10} }
 - Get robot completely working
 
 # Work
-- ROBOT RBOT ROBOT
+- ROBOT ROBOT ROBOT
 
 # Hacks
 - Get ready for N@TM
