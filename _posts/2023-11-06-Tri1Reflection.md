@@ -8,6 +8,7 @@ type: tangibles
 courses: { 'csa': {'week': 12} }
 ---
 
+# Reflection
 Reflecting on my trimester in AP Computer Science Advanced, I can't help but feel a great sense of accomplishment and personal growth. This course has been an incredible journey that not only expanded my technical knowledge but also honed important life skills like time management, teamwork, and goal setting.
 
 I especially enjoyed the part where the front page was open earlier in the year and then 
@@ -20,4 +21,5 @@ Looking ahead to the next trimesters, I am eager to delve deeper into AI and exp
 
 In conclusion, my trimester in AP Computer Science Advanced has been a transformative experience. I've not only acquired technical expertise but also developed invaluable life skills, such as time management, teamwork, and goal setting. The joy of building a robot with my team in such a short time has been a significant achievement. I'm excited to continue my journey in computer science, with a particular focus on AI, as I believe it holds the key to unlocking endless possibilities in the world of technology.
 
-Next trimester, especially looking forward, I want to see if I can make a chatbot for the Nighthawk coders website
+# Next Trimester Plans
+Next trimester, especially looking forward, I want to see if I can make a chatbot for the Nighthawk coders website.

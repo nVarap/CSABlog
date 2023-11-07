@@ -2,8 +2,8 @@
 toc: True
 comments: True
 layout: post
-title: Week Two Review Ticket
-description: Week 2 Review Ticket
+title: Boolean Study Guide
+description: Study Guide for Booleans
 type: tangibles
 courses: { 'csa': {'week': 3} }
 ---

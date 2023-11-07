@@ -16,4 +16,5 @@ courses: { 'csa': {'week': 10} }
 
 # Hacks
 - Get ready for N@TM
+- https://github.com/The-Code-Monkeys/Monkeys38/issues/5
 

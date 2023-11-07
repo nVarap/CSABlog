@@ -17,4 +17,5 @@ courses: { 'csa': {'week': 7} }
 
 # Hacks
 - Get stuff to work for the robot, order dual H bridge
+- https://github.com/The-Code-Monkeys/Monkeys38/issues/3
 

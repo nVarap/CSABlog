@@ -17,4 +17,5 @@ courses: { 'csa': {'week': 8} }
 
 # Hacks
 - Get stuff working fo rprojcet
+- https://github.com/The-Code-Monkeys/Monkeys38/issues/4
 

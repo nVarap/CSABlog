@@ -17,4 +17,5 @@ courses: { 'csa': {'week': 9} }
 # Hacks
 - See if you can go over the weekend
 - Do somethign for socket
+- https://github.com/The-Code-Monkeys/Monkeys38/issues/4
 
