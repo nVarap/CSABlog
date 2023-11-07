@@ -19,3 +19,5 @@ Despite the occasional difficulties in pacing and the rigorous nature of the cou
 Looking ahead to the next trimesters, I am eager to delve deeper into AI and explore the endless possibilities it offers. The idea of creating intelligent systems that can learn and adapt to solve complex problems fascinates me. I want to continue expanding my knowledge and skills in this domain, as I believe it holds the potential to reshape the future of technology and bring about positive changes in various industries.
 
 In conclusion, my trimester in AP Computer Science Advanced has been a transformative experience. I've not only acquired technical expertise but also developed invaluable life skills, such as time management, teamwork, and goal setting. The joy of building a robot with my team in such a short time has been a significant achievement. I'm excited to continue my journey in computer science, with a particular focus on AI, as I believe it holds the key to unlocking endless possibilities in the world of technology.
+
+Next trimester, especially looking forward, I want to see if I can make a chatbot for the Nighthawk coders website
