@@ -10,6 +10,8 @@ courses: { 'csa': {'week': 12} }
 
 Reflecting on my trimester in AP Computer Science Advanced, I can't help but feel a great sense of accomplishment and personal growth. This course has been an incredible journey that not only expanded my technical knowledge but also honed important life skills like time management, teamwork, and goal setting.
 
+I especially enjoyed the part where the front page was open earlier in the year and then 
+
 One of the standout achievements of this trimester was the successful completion of a full robot project with my team in less than a week. Building and coding a robot in such a short time frame was a daunting challenge, but it turned out to be a remarkable achievement. This experience not only pushed the boundaries of our technical skills but also taught us the importance of effective collaboration and time management. We had to set clear goals, delegate tasks, and work cohesively to meet our tight deadline. This project highlighted the significance of teamwork, as we leveraged our individual strengths to bring our robot to life. The satisfaction of seeing our creation in action was immensely rewarding and a testament to our collective effort.
 
 Despite the occasional difficulties in pacing and the rigorous nature of the course, I found myself thoroughly enjoying the experience. The excitement of learning and the sense of achievement I derived from overcoming challenges far outweighed any frustrations. This trimester has instilled in me a passion for computer science and has piqued my interest in specialized fields like artificial intelligence (AI).
