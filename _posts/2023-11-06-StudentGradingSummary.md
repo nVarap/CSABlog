@@ -17,11 +17,11 @@ Unit 5: 0.93
 Unit 6: 0.85
 Unit 7: 1
 Unit 8: N/A
-Unit 9: N/A
-Unit 10: N/A
+Unit 9: 0.95
+Unit 10: 0.86
 
-Total: 5.51/6
-Average: 0.918
+Total: 7.32/6
+Average: 0.92
 
 # Reflection: 
 Scoring a 91% on my recent computer science assignment was certainly a satisfying achievement. It was a moment of validation for the effort and dedication I've put into mastering the subject. While the grade reflects a solid understanding of the material and the ability to implement the core concepts effectively, it also serves as a reminder of the areas where improvement is needed.
