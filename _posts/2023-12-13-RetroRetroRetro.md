@@ -43,3 +43,5 @@ Tanay's Take: I think Varalu could've benefitted from some better communication 
 Taking in everybody's reflections upon my skill and what I can work on, I see that communication is not my strongest suit. I think communication also comes from my issues with time management, something I have taken strides to improve constantly over my time in CSA. I have a bunch of lists preloaded on my computer to go off for reminders, and I have been taking my time scheduling out my day, including physical health, homework, and most importantly code blocks. I have been talking to my dad, a manager himself, how he blocks out time and been taking advice from him to do stuff. Improving on these two skills is great headway, but I must make sure that I keep this into the rest of my projects.
 
 
+# Stuff With Projects We Wanted To Do
+Something we wanted to do with the project but couldn't end up doing with the project was some of the Fibonacci. Rushing, we couldn't fix up a lot of the Fibonacci HTML styling that maxes it slightly less than aesthetically pleasing. Thus, we wish we could have done more with that.
