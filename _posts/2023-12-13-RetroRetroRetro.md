@@ -38,4 +38,8 @@ Paaras’ Take: One thing Varaprasad could’ve done better is explanation of te
 
 Tanay's Take: I think Varalu could've benefitted from some better communication within the team. He clearly had very strong ideas, but he sometimes didn't articulate them well to the rest of his team, leaving us to fill in the blanks. **He is not kinda cute tho ngl**
 
+# My Final Retro-Retro-Retro
+
+Taking in everybody's reflections upon my skill and what I can work on, I see that communication is not my strongest suit. I think communication also comes from my issues with time management, something I have taken strides to improve constantly over my time in CSA. I have a bunch of lists preloaded on my computer to go off for reminders, and I have been taking my time scheduling out my day, including physical health, homework, and most importantly code blocks. I have been talking to my dad, a manager himself, how he blocks out time and been taking advice from him to do stuff. Improving on these two skills is great headway, but I must make sure that I keep this into the rest of my projects.
+
 
