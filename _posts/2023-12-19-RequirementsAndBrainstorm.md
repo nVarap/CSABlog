@@ -13,6 +13,7 @@ courses: { 'csa': {'week': 19} }
 - [ ] Implement from all 6 lessons (SASS, JQUEREY, Thymeleaf, JWT, CORS, UI/UX)
 - [ ] Implementing Java Structures 
 - [ ] Have an actual purpose
+- [ ] Link to blog for reqs. (N/A)
 
 
 # Purpose Brainstorming
@@ -20,3 +21,4 @@ courses: { 'csa': {'week': 19} }
   - bitlife
 - Crypto
 - Building management system (hospital data visualizer)
+- Somethign that uses login 
