@@ -5,7 +5,7 @@ layout: post
 title: Mini-Project Reflection and Retrospection
 description: Mini Proj. Retrospect
 type: tangibles
-courses: { 'csa': {'week': 17} }
+courses: { 'csa': {'week': 14} }
 ---
 
 # Reflection (from Review ticket)
