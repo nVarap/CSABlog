@@ -11,7 +11,7 @@ courses: { 'csa': {'week': 19} }
 Tanay's Mom
 
 Positive:
-The admin panel boasts a visually appealing color scheme that adds a touch of modernity to the interface. Navigating through the system is a breeze, thanks to the well-thought-out accessibility features. The overall design is intuitive, making it easy for users to find the functions they need.
+The admin panel boasts a visually appealing color scheme that adds a touch of modernity to the interface. Navigating through the system is easy, thanks to the well thought out features. The overall design is easy to understand, making it easy for users to find the functions they need.
 
 Negative:
 While the color scheme is nice, the GUI could use some improvements to enhance user experience further. Certain elements feel a bit cluttered, making it challenging to locate specific options. Additionally, there's room for improvement in terms of clarity, as some features lack detailed explanations.
@@ -23,12 +23,12 @@ Positive:
 The admin panel shines in terms of accessibility, providing a seamless experience for users with varying needs. The color scheme is not only visually pleasing but also contributes to an inclusive design. Navigation is straightforward, ensuring that users can efficiently manage tasks.
 
 Negative:
-On the downside, the GUI could be more user-friendly. Some elements might be confusing for new users, and a more intuitive layout would enhance the overall usability. It's essential to address the clarity of certain features, as users might struggle to understand their functionality.
+On the downside, the GUI could be more user-friendly. Some elements might be confusing for new users, and a more intuitive layout would help the overall usability. It's essential to address the understandability of certain features, as users might struggle to understand their functionality.
 
 Varalu's Mom
 
 Positive:
-Impressed by the admin panel's nice color scheme, which adds a touch of sophistication to the platform. The commitment to accessibility is evident, making it a standout choice for users with diverse needs. Navigating through the features feels smooth and efficient.
+Impressed by the admin panel's nice color scheme. The accessibility is evident, making it a standout choice for users with diverse needs. Navigating through the features feels smooth and efficient.
 
 Negative:
 However, the GUI design could be refined for a more polished look. Some users might find it challenging to grasp the functionality of certain features, requiring improved tooltips or documentation to enhance clarity.
