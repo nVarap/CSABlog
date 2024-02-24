@@ -60,4 +60,4 @@ Despite these positives, the GUI could benefit from fine-tuning. Certain element
 
 Overall reflection: 
 
-Overall, we need to work on a cleaner GUI that doesn't need to be too complex. Maybe the PAT/OPT could have been better, or better explained in a pitch, but whatever it is I need more fine-tuning for the GUI.
+Overall, we need to work on a cleaner GUI that doesn't need to be too complex. Maybe the PAT/OPT could have been better, or better explained in a pitch, but whatever it is I need more fine-tuning for the GUI. Change For cahgne sake
